@@ -51,7 +51,7 @@ router.post('/', authMiddleware, async (req, res, next) => {
             ? skillsRequired.split(",").map(skill => skill.trim()) 
             : skillsRequired,
             information,
-            createdBy: req.user
+            createdBy: req.user._id
         });
         res.status(200).send(job);
     } catch (err) {
