@@ -12,7 +12,7 @@ const requestLogger=require('./middleware/requestLogger');
 const responseLogger=require('./middleware/responseLogger');
 const errorhandling = require('./middleware/errorhanding');
 const jobRouter=require('./routes/job')
-
+app.use(cors());
 app.use(cors({
     origin: 'https://job-portal-frontend-lake.vercel.app/',
 }))
