@@ -14,7 +14,7 @@ const errorhandling = require('./middleware/errorhanding');
 const jobRouter=require('./routes/job')
 app.use(cors());
 app.use(cors({
-    origin: 'https://job-portal-frontend-lake.vercel.app',
+    origin: '*',
 }))
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
